@@ -14,7 +14,7 @@ import {
   HStack,
   SimpleGrid,
 } from '@chakra-ui/react';
-import { useViewport } from 'Hooks/useViewport';
+import { useViewport } from 'hooks/useViewport';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { Menu, MenuItem, Sidebar, useProSidebar } from 'react-pro-sidebar';
@@ -23,7 +23,7 @@ import { MockUsers } from 'storage/users';
 const Dashboard = () => {
   const router = useRouter();
   const [isMounted, setIsMounted] = React.useState(false);
-  const { width: deviceWidth } = useViewport();
+  const { oldWidth: oldDeviceWidth, width: deviceWidth } = useViewport();
 
   const { collapseSidebar } = useProSidebar();
 
@@ -31,15 +31,17 @@ const Dashboard = () => {
 
   React.useEffect(() => {
     setIsMounted(true);
-    console.log(deviceWidth);
+    // console.log(deviceWidth);
+    console.log(oldDeviceWidth, deviceWidth);
 
-    // reload on resize to fix responsive layout issues, expect for smaller mobiles
-    if (deviceWidth && deviceWidth >= 300) {
-      window.addEventListener('resize', () => {
-        window.location.reload();
-      });
-    }
-  }, [deviceWidth]);
+    // reload on resize to fix responsive layout issues
+    // console.log(deviceWidth == oldDeviceWidth);
+
+    // if (deviceWidth !== oldDeviceWidth) {
+    //   window.location.reload();
+    // }
+    // console.log(deviceWidth == window.innerWidth);
+  }, []);
 
   if (!isMounted) {
     return <FullPageLoader />;

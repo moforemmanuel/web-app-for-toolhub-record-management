@@ -64,8 +64,6 @@ const SideNav = ({ isOpen, onClose }: ISide) => {
               ))}
             </Stack>
           </DrawerBody>
-
-          <DrawerFooter borderTopWidth="1px"></DrawerFooter>
         </DrawerContent>
       </Drawer>
     </>

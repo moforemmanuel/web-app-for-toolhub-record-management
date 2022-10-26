@@ -30,7 +30,7 @@ import {
   Filler,
   ScriptableContext,
 } from 'chart.js';
-import { useViewport } from 'Hooks/useViewport';
+import { useViewport } from 'hooks/useViewport';
 import { MockTools } from 'storage/tools';
 import { FaTools } from 'react-icons/fa';
 import { useRouter } from 'next/router';
