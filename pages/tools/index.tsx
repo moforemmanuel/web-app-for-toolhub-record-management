@@ -42,7 +42,11 @@ const Tools = () => {
   }
   return (
     isMounted && (
-      <Layout>
+      <Layout
+        pageTitle="Tools"
+        pageLink="/tools"
+        description="See all tools in our record, feel free to explore, and of course leave a contribution"
+      >
         <Box>
           <Box
             w={{ md: '80%' }}
