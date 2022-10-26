@@ -45,15 +45,15 @@ const Layout = ({
   breadcrumb = null,
   pageTitle,
   pageLink,
-  description = '',
+  description = 'A dedicated web application for editing Toolhub records in a fun and easy way',
 }: // og = {},
 LayoutProps) => {
   let title: string = pageTitle
     ? `WikiMedia Toolhub Record Manager - ${pageTitle}`
     : 'WikiMedia Toolhub Record Manager';
   const canonical: string = pageLink
-    ? `https://somelink.com${pageLink}/`
-    : 'https://somelink.com/';
+    ? `https://toolhub-rms.vercel.app${pageLink}/`
+    : `https://toolhub-rms.vercel.app/`;
   return (
     <>
       <NextSeo
@@ -67,16 +67,16 @@ LayoutProps) => {
           type: 'website',
           images: [
             {
-              url: 'https://somelink.com/someimg',
+              url: `https://toolhub-rms.vercel.app/og-image.jpg`,
               alt: 'WikiMedia Toolhub Record Manager',
               type: 'image/jpg',
             },
           ],
         }}
         twitter={{
-          site: 'somesite.com',
+          site: `toolhub-rms.vercel.app`,
           cardType: 'summary_large_image',
-          handle: '@somehandle',
+          handle: '@toolhub',
         }}
         additionalMetaTags={[
           {
@@ -103,27 +103,27 @@ LayoutProps) => {
         additionalLinkTags={[
           {
             rel: 'icon',
-            href: 'https://somesite.com/favicon.ico',
+            href: `https://toolhub-rms.vercel.app/favicon.ico`,
           },
           {
             rel: 'apple-touch-icon',
             sizes: '60x60',
-            href: 'https://somesite.com/apple-touch-icon-iphone-60x60.png',
+            href: `https://toolhub-rms.vercel.app/touch-icons/apple-touch-icon-iphone-60x60.png`,
           },
           {
             rel: 'apple-touch-icon',
             sizes: '76x76',
-            href: 'https://somesite.com/apple-touch-icon-ipad-76x76.png',
+            href: `https://toolhub-rms.vercel.app/touch-icons/apple-touch-icon-ipad-76x76.png`,
           },
           {
             rel: 'apple-touch-icon',
             sizes: '114x114',
-            href: 'https://somesite.com/apple-touch-icon-iphone-retina-120x120.png',
+            href: `https://toolhub-rms.vercel.app/touch-icons/apple-touch-icon-iphone-retina-120x120.png`,
           },
           {
             rel: 'apple-touch-icon',
             sizes: '144x144',
-            href: 'https://somesite.com/apple-touch-icon-ipad-retina-152x152.png',
+            href: `https://toolhub-rms.vercel.app/touch-icons/apple-touch-icon-ipad-retina-152x152.png`,
           },
         ]}
       />
