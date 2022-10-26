@@ -52,7 +52,7 @@ const Tool = () => {
   const {
     query: { redirect, tool: toolName },
   } = router;
-  const tool = MockTools.find((tool) => tool.name === toolName);
+  const tool: ITool | undefined = MockTools.find((tool) => tool.name === toolName);
 
   tool &&
     Object.keys(tool)
@@ -151,7 +151,11 @@ const Tool = () => {
   return (
     isMounted &&
     tool && (
-      <Layout>
+      <Layout
+        pageTitle={tool && `Edit ${tool.title}`}
+        pageLink={tool && `/tools/edit/${tool.name}`}
+        description={tool && `${tool.shortDescription}`}
+      >
         <Center py={6}>
           {!tool ? (
             <Heading as="h1" textStyle="h1">
