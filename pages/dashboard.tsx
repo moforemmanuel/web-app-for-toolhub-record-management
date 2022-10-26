@@ -14,6 +14,7 @@ import {
   HStack,
   SimpleGrid,
 } from '@chakra-ui/react';
+import { useViewport } from 'Hooks/useViewport';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { Menu, MenuItem, Sidebar, useProSidebar } from 'react-pro-sidebar';
@@ -22,6 +23,7 @@ import { MockUsers } from 'storage/users';
 const Dashboard = () => {
   const router = useRouter();
   const [isMounted, setIsMounted] = React.useState(false);
+  const { width: deviceWidth } = useViewport();
 
   const { collapseSidebar } = useProSidebar();
 
@@ -29,19 +31,26 @@ const Dashboard = () => {
 
   React.useEffect(() => {
     setIsMounted(true);
+    console.log(deviceWidth);
 
-    // reload on resize to fix responsive layout issues
-    window.addEventListener('resize', () => {
-      window.location.reload();
-    });
-  }, []);
+    // reload on resize to fix responsive layout issues, expect for smaller mobiles
+    if (deviceWidth && deviceWidth >= 300) {
+      window.addEventListener('resize', () => {
+        window.location.reload();
+      });
+    }
+  }, [deviceWidth]);
 
   if (!isMounted) {
     return <FullPageLoader />;
   }
   return (
     isMounted && (
-      <Layout>
+      <Layout
+        pageTitle="Dashboard"
+        pageLink="/dashboard"
+        description="Toolhub Record Management System Dashboard"
+      >
         <Center minH="82vh" minW="100%" maxH="100%" maxW="100%" bg="gray.100">
           {!user ? (
             <Heading>No User Found</Heading>
