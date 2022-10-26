@@ -38,7 +38,11 @@ const Leaderboard = () => {
   }
   return (
     isMounted && (
-      <Layout>
+      <Layout
+        pageTitle="Leaderboard"
+        pageLink="/leaderboard"
+        description="See a ranking list of all our contributors"
+      >
         <Flex
           align="center"
           justify="center"
