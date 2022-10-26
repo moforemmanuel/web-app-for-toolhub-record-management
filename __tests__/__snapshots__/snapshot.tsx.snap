@@ -3,113 +3,364 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
-    class="container"
+    class="chakra-container css-1plr6lw"
   >
-    <main>
-      <h1
-        class="title"
-      >
-        Welcome to 
-        <a
-          href="https://nextjs.org"
-        >
-          Next.js!
-        </a>
-      </h1>
-      <p
-        class="description"
-      >
-        Get started by editing 
-        <code>
-          pages/index.js
-        </code>
-      </p>
+    <header
+      class="css-0"
+    >
       <div
-        class="grid"
+        class="chakra-stack css-18yvfzm"
       >
-        <a
-          class="card"
-          href="https://nextjs.org/docs"
+        <div
+          class="css-1l8pycx"
         >
-          <h3>
-            Documentation →
-          </h3>
-          <p>
-            Find in-depth information about Next.js features and API.
+          <p
+            class="chakra-text css-aqcv7n"
+          >
+            Where WikiMedia Tools are managed
           </p>
-        </a>
-        <a
-          class="card"
-          href="https://nextjs.org/learn"
+        </div>
+        <div
+          class="css-1lk7enj"
         >
-          <h3>
-            Learn →
-          </h3>
-          <p>
-            Learn about Next.js in an interactive course with quizzes!
-          </p>
-        </a>
-        <a
-          class="card"
-          href="https://github.com/vercel/next.js/tree/canary/examples"
+          <div
+            class="css-xe1hzm"
+          >
+            <div
+              class="css-10obmow"
+            >
+              <button
+                aria-label="Toggle Navigation"
+                class="chakra-button css-zqlntw"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-icon css-w31a5m"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="css-1gbkixn"
+            >
+              <div
+                class="css-a43tfs"
+              >
+                <span
+                  style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                >
+                  <span
+                    style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  >
+                    <img
+                      alt=""
+                      aria-hidden="true"
+                      src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27100%27%20height=%2790%27/%3e"
+                      style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    />
+                  </span>
+                  <img
+                    alt="logo"
+                    class="css-f518hu"
+                    data-nimg="intrinsic"
+                    decoding="async"
+                    src="/_next/image?url=%2Fimg.jpg&w=256&q=50"
+                    srcset="/_next/image?url=%2Fimg.jpg&w=128&q=50 1x, /_next/image?url=%2Fimg.jpg&w=256&q=50 2x"
+                    style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                  />
+                </span>
+              </div>
+              <div
+                class="css-nmdqie"
+              >
+                <div
+                  class="chakra-stack css-1ss2m3q"
+                >
+                  <div
+                    class="css-r6zo7y"
+                  >
+                    <a
+                      class="chakra-link navLink css-1f3kcn0"
+                      href="/"
+                    >
+                      Home
+                    </a>
+                  </div>
+                  <div
+                    class="css-r6zo7y"
+                  >
+                    <a
+                      class="chakra-link navLink css-1f3kcn0"
+                      href="/leaderboard"
+                    >
+                      Leaderboard
+                    </a>
+                  </div>
+                  <div
+                    class="css-r6zo7y"
+                  >
+                    <a
+                      class="chakra-link navLink css-1f3kcn0"
+                      href="/dashboard"
+                    >
+                      Dashboard
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <button
+                aria-label="Search Site"
+                class="chakra-button css-p7mkev"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-icon css-onkibi"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M23.384,21.619,16.855,15.09a9.284,9.284,0,1,0-1.768,1.768l6.529,6.529a1.266,1.266,0,0,0,1.768,0A1.251,1.251,0,0,0,23.384,21.619ZM2.75,9.5a6.75,6.75,0,1,1,6.75,6.75A6.758,6.758,0,0,1,2.75,9.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      class="css-1rvj3ps"
+    >
+      <div
+        class="css-djjd1b"
+      >
+        <div
+          class="css-o7rt0f"
         >
-          <h3>
-            Examples →
-          </h3>
-          <p>
-            Discover and deploy boilerplate example Next.js projects.
+          <h1
+            class="chakra-heading css-0"
+          >
+            Toolhub Record Management System
+          </h1>
+          <p
+            class="chakra-text css-0"
+          >
+            A dedicated web application for editing
+             
+            <a
+              class="chakra-link css-0"
+              href="https://toolhub.wikimedia.org/"
+            >
+              Toolhub
+            </a>
+             
+            records in a fun and easy way
           </p>
-        </a>
-        <a
-          class="card"
-          href="https://vercel.com/new"
+        </div>
+        <div
+          class="css-0"
+        />
+        <p
+          class="chakra-text css-tokvmb"
         >
-          <h3>
-            Deploy →
-          </h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
-        </a>
+          Incididunt id quis sit non ullamco. Nisi ad exercitation nostrud aliquip eu duis exercitation laboris enim irure aliquip officia do eiusmod. Consectetur aliqua fugiat est qui eu. Sunt in minim enim magna anim occaecat labore adipisicing laborum anim. Adipisicing cillum duis irure non quis qui nostrud aute cillum irure dolore. Deserunt sit tempor do et labore tempor nulla exercitation. Eu officia commodo duis duis et do esse reprehenderit fugiat nostrud adipisicing consectetur magna dolor. Reprehenderit irure eiusmod elit eiusmod anim deserunt sint sint est. Ad deserunt do occaecat eiusmod Lorem laborum magna ad exercitation elit ad est magna. Consequat anim amet excepteur esse anim ea ad ad nisi ea pariatur. Officia ea enim enim exercitation enim. Nulla enim excepteur velit qui deserunt eiusmod eiusmod ea culpa. Ea exercitation dolor culpa aliqua. Ut ut esse in cupidatat. Reprehenderit ullamco sunt commodo voluptate duis dolor pariatur ea culpa anim. Eiusmod labore ad eu mollit pariatur officia. Ullamco veniam nisi sit elit irure nisi eiusmod id laboris cupidatat officia. Excepteur incididunt veniam enim officia officia dolor quis quis. Consequat ex cupidatat consectetur pariatur fugiat mollit do ea eiusmod qui aliquip consectetur. Magna aliqua amet cupidatat cillum tempor culpa incididunt minim commodo exercitation ullamco nisi ad deserunt. Excepteur non mollit proident irure eu sint deserunt nulla ut. Incididunt minim consectetur non dolore elit ullamco duis nostrud. Sit esse laborum velit ex culpa aute occaecat esse ex. Cillum nostrud sint esse pariatur Lorem sunt ad Lorem consequat officia. Laborum consequat sint amet duis et amet commodo do culpa cillum est cupidatat. Exercitation et laboris voluptate et laborum exercitation incididunt aliquip veniam enim reprehenderit duis sunt. Consequat culpa fugiat minim dolor irure proident ut id ipsum nulla laborum eu consequat. Sunt tempor ut cillum officia ex aute adipisicing quis ea minim adipisicing. Ipsum dolore do in tempor consectetur dolor dolore magna anim ullamco laboris in. Veniam elit id ullamco ad in ut amet reprehenderit incididunt voluptate aute occaecat deserunt. Exercitation mollit fugiat elit proident aliqua dolore aute. Proident minim aliquip anim amet occaecat esse pariatur nostrud voluptate. Id cupidatat veniam magna eiusmod nostrud. Ipsum voluptate eu anim aute laborum enim cupidatat fugiat. Ex consectetur labore ad est laboris proident labore fugiat sit. Nisi ipsum id nisi elit eu commodo mollit do laborum. Velit ex cillum ad aliqua nulla adipisicing eiusmod aute labore officia incididunt proident. Elit in labore amet nostrud voluptate esse duis veniam minim aliquip occaecat ipsum incididunt. Velit commodo cillum quis aliquip labore deserunt exercitation deserunt ex qui cupidatat ullamco. Voluptate et tempor minim laborum laborum nulla nisi velit aliqua ex. Tempor pariatur eu nisi adipisicing aute adipisicing sunt non cupidatat magna officia ullamco minim occaecat. Minim voluptate et anim irure ea deserunt elit ipsum ipsum. Esse ipsum amet ipsum occaecat irure pariatur quis cillum aliqua minim. Consequat eiusmod occaecat aliqua Lorem sunt anim et irure ea tempor sunt dolore. Exercitation laborum culpa tempor commodo veniam. Aute officia proident sit mollit officia. Dolore ut consectetur eiusmod nulla enim aliquip non id esse. Eiusmod qui est ipsum deserunt esse pariatur occaecat deserunt ullamco velit id ullamco. Aute incididunt aliquip consequat esse velit culpa sit. Dolore duis ad veniam aliqua minim adipisicing elit eiusmod non adipisicing ea laboris anim. Magna sit eiusmod officia et consectetur exercitation. Aliqua dolore ut ut anim occaecat aute qui cupidatat labore. Voluptate deserunt officia aliqua ex.
+        </p>
       </div>
     </main>
     <footer
-      class="footer"
+      class="css-g1c13b"
     >
-      <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        rel="noopener noreferrer"
-        target="_blank"
+      <div
+        class="css-0"
       >
-        Powered by
-         
-        <span
-          class="logo"
+        <div
+          class="css-756g0i"
         >
-          <span
-            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          <div
+            class="css-10wg9xg"
           >
-            <span
-              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            <div
+              class="css-1gvp5h0"
             >
-              <img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2772%27%20height=%2716%27/%3e"
-                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-              />
-            </span>
-            <img
-              alt="Vercel Logo"
-              data-nimg="intrinsic"
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              <div
+                class="chakra-stack css-1c6kzeh"
+              >
+                <h2
+                  class="chakra-heading css-1nmbmtw"
+                >
+                  WHAT WE DO BEST
+                </h2>
+                <p
+                  class="chakra-text css-0"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eum aspernatur sint ducimus consequuntur! Cum dolores quas possimus repellat. Expedita quis amet distinctio doloremque officia eaque et, a totam alias?
+                </p>
+              </div>
+            </div>
+            <div
+              class="css-1gvp5h0"
+            >
+              <div
+                class="css-u6v8er"
+              >
+                <h2
+                  class="chakra-heading css-1nmbmtw"
+                >
+                  Quick Links
+                </h2>
+                <div
+                  class="css-86vsb7"
+                >
+                  <ul
+                    class="css-1skjuel"
+                    role="list"
+                  >
+                    <li
+                      class="css-0"
+                    >
+                      <a
+                        class="chakra-link css-19kg4ra"
+                        href="/"
+                      >
+                        <svg
+                          class="chakra-icon footer-link-icon css-1lh6gb6"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <g
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M10.458,18.374,7.721,21.11a2.853,2.853,0,0,1-3.942,0l-.892-.891a2.787,2.787,0,0,1,0-3.941l5.8-5.8a2.789,2.789,0,0,1,3.942,0l.893.892A1,1,0,0,0,14.94,9.952l-.893-.892a4.791,4.791,0,0,0-6.771,0l-5.8,5.8a4.787,4.787,0,0,0,0,6.77l.892.891a4.785,4.785,0,0,0,6.771,0l2.736-2.735a1,1,0,1,0-1.414-1.415Z"
+                            />
+                            <path
+                              d="M22.526,2.363l-.892-.892a4.8,4.8,0,0,0-6.77,0l-2.905,2.9a1,1,0,0,0,1.414,1.414l2.9-2.9a2.79,2.79,0,0,1,3.941,0l.893.893a2.786,2.786,0,0,1,0,3.942l-5.8,5.8a2.769,2.769,0,0,1-1.971.817h0a2.766,2.766,0,0,1-1.969-.816,1,1,0,1,0-1.415,1.412,4.751,4.751,0,0,0,3.384,1.4h0a4.752,4.752,0,0,0,3.385-1.4l5.8-5.8a4.786,4.786,0,0,0,0-6.771Z"
+                            />
+                          </g>
+                        </svg>
+                        Home
+                      </a>
+                    </li>
+                    <li
+                      class="css-0"
+                    >
+                      <a
+                        class="chakra-link css-5p1960"
+                        href="/leaderboard"
+                      >
+                        <svg
+                          class="chakra-icon footer-link-icon css-1lh6gb6"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <g
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M10.458,18.374,7.721,21.11a2.853,2.853,0,0,1-3.942,0l-.892-.891a2.787,2.787,0,0,1,0-3.941l5.8-5.8a2.789,2.789,0,0,1,3.942,0l.893.892A1,1,0,0,0,14.94,9.952l-.893-.892a4.791,4.791,0,0,0-6.771,0l-5.8,5.8a4.787,4.787,0,0,0,0,6.77l.892.891a4.785,4.785,0,0,0,6.771,0l2.736-2.735a1,1,0,1,0-1.414-1.415Z"
+                            />
+                            <path
+                              d="M22.526,2.363l-.892-.892a4.8,4.8,0,0,0-6.77,0l-2.905,2.9a1,1,0,0,0,1.414,1.414l2.9-2.9a2.79,2.79,0,0,1,3.941,0l.893.893a2.786,2.786,0,0,1,0,3.942l-5.8,5.8a2.769,2.769,0,0,1-1.971.817h0a2.766,2.766,0,0,1-1.969-.816,1,1,0,1,0-1.415,1.412,4.751,4.751,0,0,0,3.384,1.4h0a4.752,4.752,0,0,0,3.385-1.4l5.8-5.8a4.786,4.786,0,0,0,0-6.771Z"
+                            />
+                          </g>
+                        </svg>
+                        Leaderboard
+                      </a>
+                    </li>
+                    <li
+                      class="css-0"
+                    >
+                      <a
+                        class="chakra-link css-5p1960"
+                        href="/dashboard"
+                      >
+                        <svg
+                          class="chakra-icon footer-link-icon css-1lh6gb6"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <g
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M10.458,18.374,7.721,21.11a2.853,2.853,0,0,1-3.942,0l-.892-.891a2.787,2.787,0,0,1,0-3.941l5.8-5.8a2.789,2.789,0,0,1,3.942,0l.893.892A1,1,0,0,0,14.94,9.952l-.893-.892a4.791,4.791,0,0,0-6.771,0l-5.8,5.8a4.787,4.787,0,0,0,0,6.77l.892.891a4.785,4.785,0,0,0,6.771,0l2.736-2.735a1,1,0,1,0-1.414-1.415Z"
+                            />
+                            <path
+                              d="M22.526,2.363l-.892-.892a4.8,4.8,0,0,0-6.77,0l-2.905,2.9a1,1,0,0,0,1.414,1.414l2.9-2.9a2.79,2.79,0,0,1,3.941,0l.893.893a2.786,2.786,0,0,1,0,3.942l-5.8,5.8a2.769,2.769,0,0,1-1.971.817h0a2.766,2.766,0,0,1-1.969-.816,1,1,0,1,0-1.415,1.412,4.751,4.751,0,0,0,3.384,1.4h0a4.752,4.752,0,0,0,3.385-1.4l5.8-5.8a4.786,4.786,0,0,0,0-6.771Z"
+                            />
+                          </g>
+                        </svg>
+                        Dashboard
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-1gvp5h0"
             />
-            <noscript />
-          </span>
-        </span>
-      </a>
+            <div
+              class="css-1gvp5h0"
+            >
+              <div
+                class="chakra-stack css-owjkmg"
+              >
+                <h2
+                  class="chakra-heading css-1nmbmtw"
+                >
+                  WE ARE THE BEST
+                </h2>
+                <p
+                  class="chakra-text css-0"
+                >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, sit asperiores quibusdam voluptatum alias consequatur voluptates voluptatem laborum dolores magni nisi numquam officia dolorum labore eius, nobis laudantium. Quos, voluptas!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1n56dql"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            Toolhub Record Manager
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            2022 © ALL RIGHTS RESERVED 
+          </p>
+          <button
+            aria-label="back to top"
+            class="chakra-button css-1lemoxk"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="chakra-icon css-l47vjz"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </footer>
   </div>
 </div>
