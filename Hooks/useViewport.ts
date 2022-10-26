@@ -1,9 +1,9 @@
 import React from "react";
 
 const useViewport = () => {
-  const [width, setWidth] = React.useState(window.innerWidth);
+  const [width, setWidth] = React.useState<number>();
   // Add a second state variable "height" and default it to the current window height
-  const [height, setHeight] = React.useState(window.innerHeight);
+  const [height, setHeight] = React.useState<number>();
 
   React.useEffect(() => {
     const handleWindowResize = () => {
