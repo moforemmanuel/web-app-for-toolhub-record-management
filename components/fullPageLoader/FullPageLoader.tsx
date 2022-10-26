@@ -30,7 +30,7 @@ export default function FullPageLoader() {
                 0 0 18px #fff, -4px 
                 0 18px violet, 4px 0 18px #0ff`}
         >
-          <FaTools color="white" fontSize="1.5rem" />
+          <FaTools color="rgba(0,0,0,.5)" fontSize="1.5rem" />
         </Circle>
       </Flex>
     </Layout>
