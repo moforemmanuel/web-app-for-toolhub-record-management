@@ -80,7 +80,12 @@ const RightDash = ({ user }: RightDashProps) => {
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        position: deviceWidth >= 1200 ? 'bottom' : 'left',
+        position: 'bottom',
+        // deviceWidth <= 480
+        //   ? 'bottom'
+        //   : deviceWidth >= 1200
+        //   ? 'bottom'
+        //   : 'left',
         // fullWidth: true,
         // labels: { boxWidth: 10 },
       },
@@ -112,7 +117,7 @@ const RightDash = ({ user }: RightDashProps) => {
             pb={6}
             textAlign="center"
             fontWeight="bold"
-            px={{ base: 24, lg: 0 }}
+            px={{ sm: 24, lg: 0 }}
             position="relative"
           >
             {/* <Box
