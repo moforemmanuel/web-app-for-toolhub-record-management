@@ -32,7 +32,9 @@ const Tool = () => {
   const {
     query: { redirect, tool: toolName },
   } = router;
-  const tool = MockTools.find((tool) => tool.name === toolName);
+  const tool: ITool | undefined = MockTools.find(
+    (tool) => tool.name === toolName
+  );
   // console.log(tool);
   // console.log(
   //   tool
@@ -66,7 +68,11 @@ const Tool = () => {
   }
   return (
     isMounted && (
-      <Layout>
+      <Layout
+        pageTitle={tool && `Preview ${tool.title}`}
+        pageLink={tool && `/tools/preview/${tool.name}`}
+        description={tool && `${tool.shortDescription}`}
+      >
         {!tool ? (
           <Text>Tool Not Found</Text>
         ) : (
@@ -151,7 +157,7 @@ const Tool = () => {
                       {tool.authors.length == 0 ? (
                         <Text>No Authors</Text>
                       ) : (
-                        tool.authors.map((author) => (
+                        tool.authors.map((author: string) => (
                           <Tag
                             size="lg"
                             key={author}
