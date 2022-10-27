@@ -125,7 +125,7 @@ const Home = () => {
                   This is a management system which helps you find useful tools
                   in WikiMedia's Toolhub, which are particularly used to work
                   with data on WikiMedia. You can explore these tools, as well
-                  as edit them, provided they have missing of incorrect
+                  as edit them, provided they have missing or incorrect
                   Information. This will go a long way to aid in the
                   comprehensibility of the tools, as well as increase
                   productivity as a result.
