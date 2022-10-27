@@ -81,7 +81,7 @@ Using the project link (`https://toolhub-rms.vercel.app`) as base url, which is 
 
   - [`/leaderboard`](https://toolhub-rms.vercel.app/leaderboard) is a link to a page which shows the rankings of all contributors in the system (that is, those who have at least edited a tool once, it counts as a contribution)
   <br />
-  - [`/leaderboard`](https://toolhub-rms.vercel.app/dashboard) is a a link to a page which presents the user with statistics and analytics of his activities in miniature and the system at large. It has key metrics like Total number of Tools in the records, number of tools with missing information, percentage of tools with missing information compared with the total number of tools in the records, number of tools edited using this record management tool
+  - [`/dashboard`](https://toolhub-rms.vercel.app/dashboard) is a a link to a page which presents the user with statistics and analytics of his activities in miniature and the system at large. It has key metrics like Total number of Tools in the records, number of tools with missing information, percentage of tools with missing information compared with the total number of tools in the records, number of tools edited using this record management tool
 
 - #### Subordinate Views
 
