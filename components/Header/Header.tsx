@@ -32,7 +32,7 @@ const Header = () => {
           fontWeight="lighter"
           fontFamily="var(--chakra-fonts-manjari)"
         >
-          Where WikiMedia Tools are managed
+          The Heart of Toolhub
         </Text>
       </Flex>
       <Navbar />

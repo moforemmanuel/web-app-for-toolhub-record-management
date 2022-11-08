@@ -37,6 +37,8 @@ import { GiRank3 } from 'react-icons/gi';
 import { SiOpslevel } from 'react-icons/si';
 import { GrScorecard } from 'react-icons/gr';
 import { BiLogOut, BiUserCircle } from 'react-icons/bi';
+import ReactCountryFlag from 'react-country-flag';
+import CountUp from 'react-countup';
 
 interface ISide {
   isOpen: boolean;
@@ -90,7 +92,13 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
               mb={4}
               // border="thin solid red"
             >
-              <Box textAlign="center" w="100%">
+              <Flex
+                align="center"
+                justify="center"
+                direction="column"
+                textAlign="center"
+                w="100%"
+              >
                 <Avatar size="2xl" name="Mofor Emmanuel" src={emmaImage.src} />
                 <Text
                   mt={2}
@@ -101,7 +109,11 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
                 >
                   Mofor Emmanuel
                 </Text>
-              </Box>
+                <HStack>
+                  <ReactCountryFlag aria-label="Cameroon" countryCode="CM" />
+                  <Text>Cameroon</Text>
+                </HStack>
+              </Flex>
               <Box shadow="md" w="100%" p={4} rounded="md" bg="white">
                 <StatGroup>
                   <Stat>
@@ -109,11 +121,26 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
                       Contributions This Month
                     </StatLabel>
                     <StatNumber textAlign="center" fontSize="3xl">
-                      12
+                      <CountUp
+                        start={0}
+                        end={12}
+                        duration={2}
+                        separator={','}
+                        enableScrollSpy={true}
+                      />
                     </StatNumber>
                     <StatHelpText textAlign="center" fontSize="lg">
                       <StatArrow type="increase" />
-                      13.36%
+                      <CountUp
+                        start={0}
+                        end={13.35}
+                        duration={2}
+                        decimals={2}
+                        decimal={'.'}
+                        separator={','}
+                        enableScrollSpy={true}
+                        suffix={'%'}
+                      />
                     </StatHelpText>
                   </Stat>
                 </StatGroup>
@@ -157,13 +184,13 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
                     <SiOpslevel fontSize="1.3rem" />
                     <Text>Level</Text>
                   </HStack>
-                  <CircularProgress size="70px" value={75}>
+                  <CircularProgress size="70px" value={91} animation="linear">
                     <CircularProgressLabel
                       fontSize="2xl"
                       textAlign="center"
                       mt={1}
                     >
-                      3
+                      6
                     </CircularProgressLabel>
                   </CircularProgress>
                 </Flex>
@@ -179,7 +206,16 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
                     <GrScorecard fontSize="1.2rem" />
                     <Text>Points</Text>
                   </HStack>
-                  <Text fontSize="2xl">1250</Text>
+                  <Box fontSize="2xl">
+                    <CountUp
+                      start={0}
+                      end={5915}
+                      duration={2}
+                      separator={','}
+                      enableScrollSpy={true}
+                      suffix={' XP'}
+                    />
+                  </Box>
                 </Flex>
 
                 <Button

@@ -21,6 +21,8 @@ import {
   MenuList,
   MenuItem,
   MenuDivider,
+  Progress,
+  HStack,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -41,7 +43,7 @@ import React from 'react';
 import SideNav from '../SideNav/SideNav';
 import SearchModal from '../SearchModal/SearchModal';
 import ProfileModal from '../ProfileModal/ProfileModal';
-
+import CountUp from 'react-countup';
 export default function Navbar() {
   const { isOpen, onClose, onToggle } = useDisclosure();
   const {
@@ -144,12 +146,33 @@ export default function Navbar() {
             onClose={onCloseSearchModal}
           />
 
-          <Avatar
-            mx={3}
-            name="Mofor Emmanuel"
-            src={emmaImage.src}
-            onClick={onToggleProfileModal}
-          />
+          <HStack mx={4} ml={8}>
+            <Flex
+              align="center"
+              justify="center"
+              direction="column"
+              display={{ base: 'none', md: 'block' }}
+              // border="thin solid red"
+              fontFamily="var(--chakra-fonts-manjari)"
+            >
+              <CountUp
+                start={0}
+                end={5915}
+                duration={2}
+                separator={','}
+                enableScrollSpy={true}
+                suffix={' XP'}
+              />
+              <Progress colorScheme="green" size="md" value={91} />
+            </Flex>
+
+            <Avatar
+              mx={4}
+              name="Mofor Emmanuel"
+              src={emmaImage.src}
+              onClick={onToggleProfileModal}
+            />
+          </HStack>
         </Flex>
       </Flex>
       <ProfileModal isOpen={isOpenProfileModal} onClose={onCloseProfileModal} />
