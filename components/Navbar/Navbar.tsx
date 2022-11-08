@@ -146,7 +146,13 @@ export default function Navbar() {
             onClose={onCloseSearchModal}
           />
 
-          <HStack mx={4} ml={8}>
+          <HStack
+            mx={4}
+            ml={8}
+            // border="thin solid red"
+            // px={4}
+            // w="180px"
+          >
             <Flex
               align="center"
               justify="center"
@@ -154,6 +160,8 @@ export default function Navbar() {
               display={{ base: 'none', md: 'block' }}
               // border="thin solid red"
               fontFamily="var(--chakra-fonts-manjari)"
+              w="100px"
+              px={3}
             >
               <CountUp
                 start={0}
