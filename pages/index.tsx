@@ -129,7 +129,8 @@ const Home = () => {
                   in WikiMedia's Toolhub, which are particularly used to work
                   with data on WikiMedia. You can explore these tools, as well
                   as edit them, provided they have missing or incorrect
-                  Information.
+                  Information, and gain points which can be redeemed for
+                  rewards. Reach 5000pts to get a Toolhub T-shirt.
                 </Text>
               </Box>
 
@@ -208,7 +209,7 @@ const Home = () => {
                   title: 'Edit',
                   // text: 'Aute velit aliqua pariatur nostrud esse. Non excepteur ut esse et quis consequat. Do irure eiusmod officia proident elit do reprehenderit dolor aliqua. Esse adipisicing sit voluptate amet id nulla labore ad ipsum excepteur laborum. Consequat cupidatat est commodo dolore magna pariatur. In do sunt proident esse proident commodo.',
                   // text: 'When you know about a tool, can use it, and can provide some very important information, (either missing or not very accuate), then you can go ahead to make changes to the given, provided the information you are submitting is verifiably accurate and correct.',
-                  text: 'Knowing about a tool, you can go ahead and can provide some very important information, (either missing or not very accuate) as a contribution.',
+                  text: 'Knowing about a tool, you can go ahead and can provide some very important information, (either missing or not very accuate) as a contribution and gain points.',
                 },
                 {
                   icon: contributeIcon,

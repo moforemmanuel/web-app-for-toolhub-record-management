@@ -22,6 +22,8 @@ import {
   CircularProgress,
   CircularProgressLabel,
   Center,
+  Button,
+  HStack,
 } from '@chakra-ui/react';
 
 import NextLink from 'next/link';
@@ -30,6 +32,11 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 import { TbWorld } from 'react-icons/tb';
 import emmaImage from '../../public/emma-image.jpeg';
+
+import { GiRank3 } from 'react-icons/gi';
+import { SiOpslevel } from 'react-icons/si';
+import { GrScorecard } from 'react-icons/gr';
+import { BiLogOut, BiUserCircle } from 'react-icons/bi';
 
 interface ISide {
   isOpen: boolean;
@@ -53,7 +60,7 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
       >
         <DrawerOverlay />
         <DrawerContent
-          // bgColor="#232322"
+          bgColor="gray.50"
           color="blackAlpha.900"
           // transition="all 0.4s"
           sx={{
@@ -68,7 +75,12 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
           // borderBottomWidth="1px"
           ></DrawerHeader>
 
-          <DrawerBody px={8} h="auto" textAlign="left">
+          <DrawerBody
+            px={8}
+            h="auto"
+            textAlign="left"
+            fontFamily="var(--chakra-fonts-manjari)"
+          >
             <Flex
               align="center"
               justify="center"
@@ -80,16 +92,26 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
             >
               <Box textAlign="center" w="100%">
                 <Avatar size="2xl" name="Mofor Emmanuel" src={emmaImage.src} />
-                <Text fontSize="2xl">Mofor Emmanuel</Text>
+                <Text
+                  mt={2}
+                  fontSize="3xl"
+                  bgGradient="linear(blue.600, red.500, blue.600)"
+                  bgClip="text"
+                  textStyle="h1"
+                >
+                  Mofor Emmanuel
+                </Text>
               </Box>
-              <Box shadow="sm" w="100%" p={4}>
+              <Box shadow="md" w="100%" p={4} rounded="md" bg="white">
                 <StatGroup>
                   <Stat>
-                    <StatLabel textAlign="center">
+                    <StatLabel textAlign="center" fontSize="lg">
                       Contributions This Month
                     </StatLabel>
-                    <StatNumber textAlign="center">12</StatNumber>
-                    <StatHelpText textAlign="center">
+                    <StatNumber textAlign="center" fontSize="3xl">
+                      12
+                    </StatNumber>
+                    <StatHelpText textAlign="center" fontSize="lg">
                       <StatArrow type="increase" />
                       13.36%
                     </StatHelpText>
@@ -103,7 +125,9 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
                 gap={3}
                 p={4}
                 w="100%"
-                shadow="md"
+                shadow="lg"
+                rounded="xl"
+                bg="white"
               >
                 <Flex
                   align="center"
@@ -113,7 +137,10 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
                   // gap={4}
                   // border="thin solid red"
                 >
-                  <Text>Rank</Text>
+                  <HStack>
+                    <GiRank3 fontSize="1.3rem" />
+                    <Text>Rank</Text>
+                  </HStack>
                   <Text fontSize="2xl">
                     1<sup>st</sup>
                   </Text>
@@ -126,9 +153,16 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
                   px={4}
                   // border="thin solid red"
                 >
-                  <Text>Level</Text>
-                  <CircularProgress value={75}>
-                    <CircularProgressLabel fontSize="xl">
+                  <HStack>
+                    <SiOpslevel fontSize="1.3rem" />
+                    <Text>Level</Text>
+                  </HStack>
+                  <CircularProgress size="70px" value={75}>
+                    <CircularProgressLabel
+                      fontSize="2xl"
+                      textAlign="center"
+                      mt={1}
+                    >
                       3
                     </CircularProgressLabel>
                   </CircularProgress>
@@ -141,83 +175,56 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
                   px={4}
                   // border="thin solid red"
                 >
-                  <Text>Points</Text>
+                  <HStack>
+                    <GrScorecard fontSize="1.2rem" />
+                    <Text>Points</Text>
+                  </HStack>
                   <Text fontSize="2xl">1250</Text>
                 </Flex>
+
+                <Button
+                  colorScheme="green"
+                  p={5}
+                  rounded={0}
+                  // borderTopStartRadius="full"
+                  // borderBottomEndRadius="full"
+                  borderBottomStartRadius="2rem"
+                  borderTopEndRadius="2rem"
+                  transition="all 0.5s"
+                  _hover={{
+                    borderTopStartRadius: 'full',
+                    borderBottomEndRadius: 'full',
+                    variant: 'outline',
+                    bg: 'white',
+                    color: 'green.600',
+                    border: 'thin solid #2F855A',
+                  }}
+                >
+                  Claim Reward
+                </Button>
               </Flex>
             </Flex>
 
-            <Stack
-              id="nav-drawer"
-              spacing="0"
-              sx={{
-                '& div': {
-                  'border-bottom': 'thin solid #dcdcdc',
-                },
-                '& > *:last-child': {
-                  'border-bottom': 'none',
-                },
-              }}
-            >
-              {[
-                {
-                  label: 'Profile',
-                  link: '/',
-                },
-                {
-                  label: 'Leaderboard',
-                  link: '/leaderboard',
-                },
-                {
-                  label: 'Dashboard',
-                  link: '/dashboard',
-                },
-              ].map((item) => (
-                <Box
-                  key={item.label}
-                  // borderBottom="thin solid #dcdcdc"
-                  layerStyle="sideNavBox"
-                  textAlign="left"
-                >
-                  <NextLink href={item.link} passHref>
-                    <Link
-                      className={pathname.startsWith(item.link) ? 'active' : ''}
-                      _active={{ color: 'primary' }}
-                      textTransform="uppercase"
-                    >
-                      {item.label}
-                    </Link>
-                  </NextLink>
-                </Box>
-              ))}
-            </Stack>
+            <Flex align="flex-start" justify="center" direction="column">
+              <HStack mt={4}>
+                <BiUserCircle fontSize="2rem" color="blue.500" />
+                <NextLink href="/" passHref>
+                  <Link fontSize="2xl">My Profile</Link>
+                </NextLink>
+              </HStack>
 
-            <Flex
-              align="flex-start"
-              justify="center"
-              gap={2}
-              direction="column"
-              mt={8}
-              fontSize="sm"
-            >
-              <Flex align="center" justify="center" direction="row" gap={3}>
-                <FaPhoneAlt />
-                <Text>support_phone</Text>
-              </Flex>
-              <Flex align="center" justify="center" direction="row" gap={3}>
-                <GrMail />
-                <Text>support@rms.toolhub.com</Text>
-              </Flex>
-              <Flex align="center" justify="center" direction="row" gap={3}>
-                <TbWorld />
-                <Text>rms.toolhub.com</Text>
-              </Flex>
+              <HStack mt={4}>
+                <BiLogOut fontSize="2rem" color="blue.500" />
+                <NextLink href="/" passHref>
+                  <Link fontSize="2xl">Logout</Link>
+                </NextLink>
+              </HStack>
             </Flex>
           </DrawerBody>
 
-          <DrawerFooter
+          {/* <DrawerFooter
           // borderTopWidth="1px"
-          ></DrawerFooter>
+          ></DrawerFooter> */}
         </DrawerContent>
       </Drawer>
     </>
