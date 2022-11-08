@@ -130,7 +130,11 @@ const Home = () => {
                   with data on WikiMedia. You can explore these tools, as well
                   as edit them, provided they have missing or incorrect
                   Information, and gain points which can be redeemed for
-                  rewards. Reach 5000pts to get a Toolhub T-shirt.
+                  rewards. Reach{' '}
+                  <Text as="span" color="green.600">
+                    5000 XP
+                  </Text>{' '}
+                  to get a Toolhub T-shirt.
                 </Text>
               </Box>
 
@@ -195,7 +199,7 @@ const Home = () => {
             <Box>
               <Heading textStyle="h1">Getting Engaged</Heading>
             </Box>
-            <SimpleGrid columns={[1, 2, 4]} spacing={3}>
+            <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} spacing={3}>
               {[
                 {
                   icon: exploreIcon,
