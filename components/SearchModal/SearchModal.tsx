@@ -101,7 +101,7 @@ function SearchModal({ isOpen, onOpen, onClose }: SearchModalProps) {
             // minH={window.innerHeight - 100}
             w="100%"
             bg="none"
-            minH={window.innerHeight / 2}
+            minH={'50vh'}
             // border="thin solid red"
           >
             <IconButton
