@@ -191,7 +191,7 @@ const MiddleDash = ({ user }: MiddleDashProps) => {
               textAlign="left"
               mb={3}
               color="green.600"
-              className="animate__animated animate__fadeInDown animate__slow"
+              className="animate__animated animate__fadeIn animate__slow"
             >
               Hey {user.firstName},
             </Heading>
@@ -201,7 +201,7 @@ const MiddleDash = ({ user }: MiddleDashProps) => {
                 as="h2"
                 fontSize="xl"
                 textAlign="start"
-                className="animate__animated animate__bounceIn animate__slow"
+                className="animate__animated animate__fadeIn animate__slow"
               >
                 Your Contribution Activity
               </Heading>
@@ -244,7 +244,7 @@ const MiddleDash = ({ user }: MiddleDashProps) => {
           <VStack p={3} mb={0}>
             <Heading
               mb={3}
-              className="animate__animated animate__bounceIn animate__slow"
+              className="animate__animated animate__fadeIn animate__slow"
             >
               Record Statistics
             </Heading>
@@ -327,7 +327,7 @@ const MiddleDash = ({ user }: MiddleDashProps) => {
             <Heading
               mb={3}
               textStyle="h1"
-              className="animate__animated animate__bounceIn animate__slow"
+              className="animate__animated animate__fadeIn animate__slow"
             >
               Tools You Edited
             </Heading>

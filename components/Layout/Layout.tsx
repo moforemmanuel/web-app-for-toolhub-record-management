@@ -6,8 +6,9 @@ import {
   BreadcrumbLink,
   Flex,
   Heading,
+  IconButton,
 } from '@chakra-ui/react';
-import { ArrowRightIcon } from '@chakra-ui/icons';
+import { ArrowRightIcon, Search2Icon } from '@chakra-ui/icons';
 
 import { NextSeo } from 'next-seo';
 // import dynamic from 'next/dynamic';
@@ -16,6 +17,7 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 import NextLink from 'next/link';
+import { Tooltip } from 'chart.js';
 
 // import frontImage from '../../public/front.png';
 // import Head from 'next/head';
@@ -142,7 +144,7 @@ LayoutProps) => {
           <Header />
         </Box>
 
-        <Box minH="60vh" py={{ base: 3, md: 2 }} as="main">
+        <Box minH="60vh" py={{ base: 3, md: 2 }} as="main" zIndex="10">
           {breadcrumb && (
             <Box>
               <Flex
@@ -187,6 +189,7 @@ LayoutProps) => {
           )}
           {children}
         </Box>
+
         <Box border="thin solid black" m={0} h="auto" maxW="100%" as="footer">
           <Footer />
         </Box>

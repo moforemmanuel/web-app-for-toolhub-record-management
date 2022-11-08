@@ -14,6 +14,13 @@ import {
   useColorModeValue,
   // useBreakpointValue,
   useDisclosure,
+  Menu,
+  MenuButton,
+  Button,
+  Avatar,
+  MenuList,
+  MenuItem,
+  MenuDivider,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -25,12 +32,15 @@ import {
 
 import NextLink from 'next/link';
 
+import emmaImage from '../../public/emma-image.jpeg';
+
 // import { BiMailSend } from 'react-icons/bi';
 import CImage from '../CImage/CImage';
-import logo from '../../public/metawiki.png';
+import logo from '../../public/logo.png';
 import React from 'react';
 import SideNav from '../SideNav/SideNav';
 import SearchModal from '../SearchModal/SearchModal';
+import ProfileModal from '../ProfileModal/ProfileModal';
 
 export default function Navbar() {
   const { isOpen, onClose, onToggle } = useDisclosure();
@@ -39,6 +49,12 @@ export default function Navbar() {
     onOpen: onOpenSearchModal,
     onClose: onCloseSearchModal,
   } = useDisclosure({ id: 'searchBtn' });
+
+  const {
+    isOpen: isOpenProfileModal,
+    onToggle: onToggleProfileModal,
+    onClose: onCloseProfileModal,
+  } = useDisclosure();
 
   return (
     <Box minW="100%">
@@ -96,14 +112,16 @@ export default function Navbar() {
             maxH="70"
             minW="120"
             minH="70"
+            // border="thin solid red"
+            mt={1}
           >
             <CImage
               src={logo.src}
               // width={logo.width}
               // height={logo.height}
               p={6}
-              width={100}
-              height={90}
+              width={120}
+              height={110}
               layout="fill"
               priority
               quality={50}
@@ -113,7 +131,6 @@ export default function Navbar() {
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
-
           {/* <IconButton
             aria-label="Search Site"
             variant="ghost"
@@ -125,9 +142,16 @@ export default function Navbar() {
             onOpen={onOpenSearchModal}
             onClose={onCloseSearchModal}
           />
+          <Avatar
+            mx={3}
+            name="Mofor Emmanuel"
+            src={emmaImage.src}
+            quality={23}
+            onClick={onToggleProfileModal}
+          />
         </Flex>
       </Flex>
-
+      <ProfileModal isOpen={isOpenProfileModal} onClose={onCloseProfileModal} />
       <SideNav isOpen={isOpen} onClose={onClose} />
     </Box>
   );
