@@ -142,9 +142,7 @@ const ProfileModal = ({ isOpen, onClose }: ISide) => {
                   // border="thin solid red"
                 >
                   <Text>Points</Text>
-                  <Text fontSize="2xl">
-                    1250<sup>Pts</sup>
-                  </Text>
+                  <Text fontSize="2xl">1250</Text>
                 </Flex>
               </Flex>
             </Flex>

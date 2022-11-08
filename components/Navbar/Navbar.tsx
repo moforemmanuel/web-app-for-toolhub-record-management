@@ -137,16 +137,17 @@ export default function Navbar() {
             icon={<SearchIcon />}
             onClick={onOpen}
           /> */}
+
           <SearchModal
             isOpen={isOpenSearchModal}
             onOpen={onOpenSearchModal}
             onClose={onCloseSearchModal}
           />
+
           <Avatar
             mx={3}
             name="Mofor Emmanuel"
             src={emmaImage.src}
-            quality={23}
             onClick={onToggleProfileModal}
           />
         </Flex>
