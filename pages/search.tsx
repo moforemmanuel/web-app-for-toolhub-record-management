@@ -95,7 +95,7 @@ const SearchScreen = () => {
                     shadow="lg"
                     transition="all 0.6s"
                     _hover={{
-                      transform: 'scale(1.1)',
+                      transform: 'scale(1.05)',
                     }}
                   >
                     <HStack

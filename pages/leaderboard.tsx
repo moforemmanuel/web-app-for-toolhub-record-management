@@ -57,6 +57,9 @@ const Leaderboard = () => {
               gap={3}
               margin="0 auto"
               textAlign="center"
+              data-aos="fade-down"
+              px={3}
+              className="animate__animated animate__fadeInDown"
             >
               <Box w="50" h="50" p={0}>
                 <CImage
@@ -73,7 +76,6 @@ const Leaderboard = () => {
                 as="h1"
                 textStyle="h1"
                 fontSize={{ base: '4xl', md: '5xl' }}
-                className="animate__animated animate__backInDown animate__slow"
               >
                 Contributors Leaderboard
               </Heading>
@@ -120,7 +122,10 @@ const Leaderboard = () => {
                         (a, b) => b.contributions_count - a.contributions_count
                       ).map((user, index) => (
                         <React.Fragment key={user.username}>
-                          <Tr>
+                          <Tr
+                            transition="all 0.5s"
+                            _hover={{ transform: 'scale(1.05)', shadow: 'lg' }}
+                          >
                             <Td width="20%" textAlign="center">
                               {index + 1}
                             </Td>

@@ -52,7 +52,7 @@ const layerStyles = {
     letterSpacing: '0.085rem',
 
     '&:hover': {
-      backgroundColor: '#171616',
+      backgroundColor: 'blue.50',
     },
   },
 };

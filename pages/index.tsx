@@ -70,6 +70,8 @@ const Home = () => {
               colSpan={{ md: 5 }}
               pl={{ md: 6 }}
               data-aos="zoom-in"
+              gap={1}
+              // border="thin solid red"
             >
               {/* Hero Section */}
               <Box mt={3} p={3}>
@@ -79,7 +81,7 @@ const Home = () => {
                   //  color="blue.600"
                   bgGradient="linear(blue.600, red.500, blue.600)"
                   bgClip="text"
-                  className="animate__animated animate__backInDown animate__slow"
+                  className="animate__animated animate__fadeInDown"
                 >
                   Toolhub Record Management System
                 </Heading>
@@ -104,7 +106,8 @@ const Home = () => {
                     textAlign="center"
                     w={{ md: '80%' }}
                     m="0 auto"
-                    className="animate__animated animate__zoomInDown animate__slow animate__delay-1s"
+                    mt={3}
+                    className="animate__animated animate__fadeInDown animate__delay-1s"
                   >
                     A dedicated web application for editing{' '}
                     <NextLink href="https://toolhub.wikimedia.org/" passHref>
@@ -120,21 +123,19 @@ const Home = () => {
               <Box p={3}>
                 <Text
                   textAlign="justify"
-                  className="animate__animated animate__backInUp animate__slow animate__delay-2s"
+                  className="animate__animated animate__fadeInUp animate__delay-2s"
                 >
                   This is a management system which helps you find useful tools
                   in WikiMedia's Toolhub, which are particularly used to work
                   with data on WikiMedia. You can explore these tools, as well
                   as edit them, provided they have missing or incorrect
-                  Information. This will go a long way to aid in the
-                  comprehensibility of the tools, as well as increase
-                  productivity as a result.
+                  Information.
                 </Text>
               </Box>
 
               {/* See all tools section */}
               <Button
-                className="animate__animated animate__zoomInDown animate__slow animate__delay-2s"
+                className="animate__animated animate__fadeInUp animate__delay-2s"
                 size="lg"
                 rightIcon={<ExternalLinkIcon fontSize="1.5rem" />}
                 colorScheme="green"
@@ -155,7 +156,7 @@ const Home = () => {
                 onClick={() => router.push('/tools')}
               >
                 <Heading as="h3" fontSize="2xl" textAlign="center">
-                  See all tools in the record
+                  See tools missing info
                 </Heading>
               </Button>
               {/* See all tools section */}
@@ -199,25 +200,29 @@ const Home = () => {
                   icon: exploreIcon,
                   title: 'Explore',
                   // text: 'Aute velit aliqua pariatur nostrud esse. Non excepteur ut esse et quis consequat. Do irure eiusmod officia proident elit do reprehenderit dolor aliqua. Esse adipisicing sit voluptate amet id nulla labore ad ipsum excepteur laborum. Consequat cupidatat est commodo dolore magna pariatur. In do sunt proident esse proident commodo.',
-                  text: "Most often, you cannot use or add to what you don't know. For that reason, it is necessary to preview or explore a tool and try to get a hang of it before trying to use it properly or contributing to it by editing and providing some important missing information about the tool.",
+                  // text: "Most often, you cannot use or add to what you don't know. For that reason, it is necessary to preview or explore a tool and try to get a hang of it before trying to use it properly or contributing to it by editing and providing some important missing information about the tool.",
+                  text: "Most often, you cannot use or add to what you don't know. For that reason, it is necessary to preview or explore a tool before contributing to it.",
                 },
                 {
                   icon: editIcon,
                   title: 'Edit',
                   // text: 'Aute velit aliqua pariatur nostrud esse. Non excepteur ut esse et quis consequat. Do irure eiusmod officia proident elit do reprehenderit dolor aliqua. Esse adipisicing sit voluptate amet id nulla labore ad ipsum excepteur laborum. Consequat cupidatat est commodo dolore magna pariatur. In do sunt proident esse proident commodo.',
-                  text: 'When you know about a tool, can use it, and can provide some very important information, (either missing or not very accuate), then you can go ahead to make changes to the given, provided the information you are submitting is verifiably accurate and correct.',
+                  // text: 'When you know about a tool, can use it, and can provide some very important information, (either missing or not very accuate), then you can go ahead to make changes to the given, provided the information you are submitting is verifiably accurate and correct.',
+                  text: 'Knowing about a tool, you can go ahead and can provide some very important information, (either missing or not very accuate) as a contribution.',
                 },
                 {
                   icon: contributeIcon,
                   title: 'Contribute',
                   // text: 'Aute velit aliqua pariatur nostrud esse. Non excepteur ut esse et quis consequat. Do irure eiusmod officia proident elit do reprehenderit dolor aliqua. Esse adipisicing sit voluptate amet id nulla labore ad ipsum excepteur laborum. Consequat cupidatat est commodo dolore magna pariatur. In do sunt proident esse proident commodo.',
-                  text: 'What is the point of keeping knowledge to oneself? We encourage users to contribution to tools, either by editing those tools with this record management system, or by using these tools for the purpose for they were built. By so doing, help beneficiaries to these tools.',
+                  // text: 'What is the point of keeping knowledge to oneself? We encourage users to contribution to tools, either by editing those tools with this record management system, or by using these tools for the purpose for they were built. By so doing, help beneficiaries to these tools.',
+                  text: 'We encourage users to contribute to tools, either by editing those tools with this record management system, or by using these tools for the purpose for they were built.',
                 },
                 {
                   icon: utilizeIcon,
                   title: 'Utilize',
                   // text: 'Aute velit aliqua pariatur nostrud esse. Non excepteur ut esse et quis consequat. Do irure eiusmod officia proident elit do reprehenderit dolor aliqua. Esse adipisicing sit voluptate amet id nulla labore ad ipsum excepteur laborum. Consequat cupidatat est commodo dolore magna pariatur. In do sunt proident esse proident commodo.',
-                  text: 'Using a tool to make changes to datasets viewed by many is an act of heroism, no matter how small. Only us can build our community, and it is only throught working together than we can achieve that. For that reason, there are tools at our disposal to contribute to new or existing data/info.',
+                  // text: 'Using a tool to make changes to datasets viewed by many is an act of heroism, no matter how small. Only us can build our community, and it is only throught working together than we can achieve that. For that reason, there are tools at our disposal to contribute to new or existing data/info.',
+                  text: 'Using a tool to make changes to resources viewed by many is an act of heroism, no matter how small. Only us can build our community, and it is only throught working together than we can achieve that.',
                 },
               ].map((item, index) => (
                 <GridItem

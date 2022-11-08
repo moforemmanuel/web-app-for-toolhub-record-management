@@ -1,11 +1,11 @@
 import '@/styles/global.css';
 import type { AppProps } from 'next/app';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import theme from '../theme';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import 'animate.css'
+import 'animate.css';
 // fonts
 import '@fontsource/roboto/700.css';
 import '@fontsource/open-sans/400.css';
