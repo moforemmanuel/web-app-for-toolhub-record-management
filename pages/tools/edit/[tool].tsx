@@ -35,6 +35,7 @@ import { BiGitBranch } from 'react-icons/bi';
 import { RiBug2Line } from 'react-icons/ri';
 import { IoDocumentTextOutline } from 'react-icons/io5';
 import Swal from 'sweetalert2';
+import { useReward } from 'react-rewards';
 
 const Tool = () => {
   const {
@@ -45,6 +46,8 @@ const Tool = () => {
     getValues,
   } = useForm();
 
+  const { reward, isAnimating } = useReward('rewardId', 'confetti');
+
   const router = useRouter();
   const [isMounted, setIsMounted] = React.useState(false);
   const [isDiscarding, setIsDiscarding] = React.useState(false);
@@ -52,7 +55,9 @@ const Tool = () => {
   const {
     query: { redirect, tool: toolName },
   } = router;
-  const tool: ITool | undefined = MockTools.find((tool) => tool.name === toolName);
+  const tool: ITool | undefined = MockTools.find(
+    (tool) => tool.name === toolName
+  );
 
   tool &&
     Object.keys(tool)
@@ -111,9 +116,15 @@ const Tool = () => {
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
-          Swal.fire('Changes Saved Successfully!', '', 'success').then(() =>
+          // Swal.fire('Changes Saved Successfully!', '', 'success')
+          Swal.fire({
+            icon: 'success',
+            title: 'Changes Saved Successfully',
+            html: '<span id="rewardId">Congrats, you just earned 200XP</span><br />Thanks for your contribution!',
+          }).then(() =>
             router.push(redirect?.toString() || `/tools/preview/${tool?.name}`)
           );
+          reward();
         }
         // else if (result.isDenied) {
         //   Swal.fire('Changes are not saved', '', 'info');
